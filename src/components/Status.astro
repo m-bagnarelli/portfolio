@@ -1,0 +1,13 @@
+---
+	const available = true;
+---
+
+<section class="flex items-center gap-2">
+	<div class:list={['w-2', 'h-2', 'rounded-full', 'bg-orange-400', { '!bg-green-400': available }]}></div>
+	<span class:list={['text-sm', 'uppercase', 'tracking-wider', 'text-orange-400', { '!text-green-400': available }]}>
+		{ available ? 'Currently taking on new work.' : 'Currently not taking on new work.' }
+	</span>
+</section>
+
+
+
