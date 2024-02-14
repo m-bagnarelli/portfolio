@@ -1,0 +1,32 @@
+---
+interface ILink {
+	name: string;
+	url: string;
+}
+
+const links: ILink[] = [
+	{
+		name: 'Linkedin',
+		url: 'https://linkedin.com/in/mariano-bagnarelli',
+	},
+	{
+		name: 'Github',
+		url: 'https://github.com/m-bagnarelli',
+	},
+	{
+		name: 'Bento',
+		url: 'https://bento.me/mbagnarelli',
+	}
+];
+---
+
+<section class="mt-9">
+	<h3 class="uppercase text-gray-400 mb-2">Find me</h3>
+	<ul class="flex items-center gap-6">
+		{links.map(link => (
+			<li>
+				<a class="uppercase text-lime underline underline-offset-4 tracking-wider" href={link.url} target="_blank">{link.name}</a>
+			</li>
+		))}
+	</ul>
+</section>
